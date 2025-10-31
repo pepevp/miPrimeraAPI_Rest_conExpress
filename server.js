@@ -5,19 +5,30 @@ const app = express();
 // Middleware para poder procesar datos en formato JSON
 app.use(express.json());
 
+//const clientesRoutes = require('./routes/clientesRoutes');
+//app.use('/clientes', clientesRoutes);
 
+// Definir una ruta básica (endpoint) de prueba
+app.get("/", (req, res) => {
+res.send("🚀 Servidor Express funcionando correctamente");
+});
 
-const clientesRoutes = require('./routes/clientesRoutes');
-app.use('/clientes', clientesRoutes);
+app.get("/usuarios", (req, res) => {
+    res.send("Listado de usuarios, 1, 2, 3, 4, 5");
+});
 
-//Lanzar el servidor
+// Definir el puerto donde escuchará el servidor
 const PORT = 3000;
+// Iniciar el servidor y escuchar peticiones en el puerto definido
 app.listen(PORT, () => {
-    console.log('Servidor escuchando en http://localhost:3000');
+console.log(`✅ Servidor en ejecución: http://localhost:${PORT}`);
 });
 
 
-
+/* para comprobar que funciona, xampp inciado, en el node.js pront estando en el directori
+de este proyecto, escribir nodemon.js. y en el navegador poner:
+http://localhost:3000/
+http://localhost:3000/usuarios
 
 
 
