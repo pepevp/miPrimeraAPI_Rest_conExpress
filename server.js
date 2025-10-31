@@ -30,6 +30,9 @@ de este proyecto, escribir nodemon.js. y en el navegador poner:
 http://localhost:3000/
 http://localhost:3000/usuarios
 
+hay que mirar lo de la pagina 52 que es el ejercicio y ver 
+en la 41 lo del fs que es algo de la node
+
 
 
 
